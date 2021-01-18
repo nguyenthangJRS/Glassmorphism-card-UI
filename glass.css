@@ -1,0 +1,182 @@
+body {
+  margin: 0 auto;
+  padding: 0;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+}
+
+body .container {
+  width: 1200px;
+  position: relative;
+  margin: 0 auto;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  position: relative;
+  min-height: 100vh;
+  background: linear-gradient(45deg, #55efc4, #dfe6e9);
+}
+
+body .container::before {
+  content: '';
+  position: absolute;
+  bottom: 300px;
+  right: 30px;
+  width: 250px;
+  height: 250px;
+  -webkit-clip-path: circle(50% at 50%);
+          clip-path: circle(50% at 50%);
+  background: linear-gradient(45deg, #D6A2E8, #f1f2f6);
+  -webkit-animation: circleRight 10s linear infinite;
+          animation: circleRight 10s linear infinite;
+  -webkit-box-shadow: 10px 10px 10px rgba(0, 0, 0, 0.1);
+          box-shadow: 10px 10px 10px rgba(0, 0, 0, 0.1);
+}
+
+body .container::after {
+  content: '';
+  position: absolute;
+  top: 300px;
+  left: 30px;
+  width: 250px;
+  height: 250px;
+  -webkit-clip-path: circle(50% at 50%);
+          clip-path: circle(50% at 50%);
+  background: linear-gradient(45deg, #D6A2E8, #f1f2f6);
+  -webkit-animation: circleLeft 10s linear infinite;
+          animation: circleLeft 10s linear infinite;
+}
+
+body .container .card {
+  width: 250px;
+  height: 400px;
+  margin-left: 40px;
+  -webkit-box-shadow: 10px 10px 10px rgba(0, 0, 0, 0.1);
+          box-shadow: 10px 10px 10px rgba(0, 0, 0, 0.1);
+  z-index: 99;
+  -webkit-backdrop-filter: blur(10px);
+          backdrop-filter: blur(10px);
+  background: rgba(255, 255, 255, 0.1);
+  border: 1px solid rgba(255, 255, 255, 0.4);
+  border-right: 1px solid rgba(255, 255, 255, 0.2);
+  border-bottom: 1px solid rgba(255, 255, 255, 0.2);
+  position: relative;
+}
+
+body .container .card h3 {
+  font-size: 60px;
+  color: white;
+  position: absolute;
+  opacity: 0.7;
+  top: 20%;
+  left: 5%;
+}
+
+body .container .card h2 {
+  font-size: 34px;
+  padding: 0 20px 0 20px;
+}
+
+body .container .card p {
+  padding: 0 20px 20px 20px;
+}
+
+body .container .card a {
+  position: absolute;
+  text-decoration: none;
+  padding: 15px 35px;
+  background: #70a1ff;
+  border-radius: 5px;
+  color: white;
+  font-size: 16px;
+  left: 20%;
+}
+
+body .container .card a:hover {
+  opacity: 0.7;
+}
+
+@-webkit-keyframes circleLeft {
+  0% {
+    -webkit-transform: translateY(0);
+            transform: translateY(0);
+  }
+  50% {
+    -webkit-transform: translateX(400px);
+            transform: translateX(400px);
+  }
+  70% {
+    -webkit-transform: translateY(400px);
+            transform: translateY(400px);
+  }
+  100% {
+    -webkit-transform: translateY(0);
+            transform: translateY(0);
+  }
+}
+
+@keyframes circleLeft {
+  0% {
+    -webkit-transform: translateY(0);
+            transform: translateY(0);
+  }
+  50% {
+    -webkit-transform: translateX(400px);
+            transform: translateX(400px);
+  }
+  70% {
+    -webkit-transform: translateY(400px);
+            transform: translateY(400px);
+  }
+  100% {
+    -webkit-transform: translateY(0);
+            transform: translateY(0);
+  }
+}
+
+@-webkit-keyframes circleRight {
+  0% {
+    -webkit-transform: translateY(0);
+            transform: translateY(0);
+  }
+  50% {
+    -webkit-transform: translateX(-400px);
+            transform: translateX(-400px);
+  }
+  70% {
+    -webkit-transform: translateY(-400px);
+            transform: translateY(-400px);
+  }
+  100% {
+    -webkit-transform: translateY(0);
+            transform: translateY(0);
+  }
+}
+
+@keyframes circleRight {
+  0% {
+    -webkit-transform: translateY(0);
+            transform: translateY(0);
+  }
+  50% {
+    -webkit-transform: translateX(-400px);
+            transform: translateX(-400px);
+  }
+  70% {
+    -webkit-transform: translateY(-400px);
+            transform: translateY(-400px);
+  }
+  100% {
+    -webkit-transform: translateY(0);
+            transform: translateY(0);
+  }
+}
+/*# sourceMappingURL=glass.css.map */

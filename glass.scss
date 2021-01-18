@@ -1,0 +1,122 @@
+$cardHight : 400px;
+body{
+    margin: 0 auto;
+    padding: 0;
+    box-sizing: border-box;
+  
+    .container{
+        width: 1200px;
+        position: relative;
+        margin: 0 auto;
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: center;
+        align-items: center;
+        position: relative;
+        min-height: 100vh;
+        background: linear-gradient(45deg,#55efc4,#dfe6e9,);
+
+        &::before{
+            content: '';
+            position: absolute;
+            bottom: 300px;
+            right: 30px;
+            width: 250px;
+            height: 250px;
+            clip-path: circle(50% at 50%);
+            background: linear-gradient(45deg,#D6A2E8,#f1f2f6);
+            animation: circleRight 10s linear infinite;
+            box-shadow: 10px 10px 10px rgba(0,0,0,0.1);
+        }
+        &::after{
+            content: '';
+            position: absolute;
+            top: 300px;
+            left: 30px;
+            width: 250px;
+            height: 250px;
+            clip-path: circle(50% at 50%);
+            background: linear-gradient(45deg,#D6A2E8,#f1f2f6);
+            animation: circleLeft 10s linear infinite;
+        }
+       .card{
+           width: 250px;
+           height: $cardHight;
+           margin-left: 40px;
+           box-shadow: 10px 10px 10px rgba(0,0,0,0.1);
+           z-index: 99;
+           backdrop-filter: blur(10px);
+           background: rgba(255,255,255,0.1);
+           border: 1px solid rgba(255,255,255,0.4);
+           border-right: 1px solid rgba(255,255,255,0.2);
+           border-bottom: 1px solid rgba(255,255,255,0.2);
+           position: relative;
+
+           h3{
+               font-size: 60px;
+               color: white;
+               position: absolute;
+               opacity: 0.7;
+               top: 20%;
+               left: 5%;
+           }
+           h2{
+               font-size: 34px;
+               padding:0 20px 0 20px;
+           }
+           p{
+               padding:0 20px 20px 20px;
+           }
+           a{
+               position: absolute;
+               text-decoration: none;
+               padding: 15px 35px;
+               background: #70a1ff;
+               border-radius: 5px;
+               color: white;
+               font-size: 16px;
+               left: 20%;
+               &:hover{
+                   opacity: 0.7;
+               }
+               
+           }
+          
+
+       }   
+    }
+}
+@keyframes circleLeft {
+    0%{
+        transform: translateY(0);
+    }
+    50%{
+        transform: translateX($cardHight);
+
+    }
+
+    70%{
+        transform: translateY($cardHight);
+    }
+    100%{
+        transform: translateY(0);
+    }
+    
+}
+@keyframes circleRight {
+    0%{
+        transform: translateY(0);
+    }
+    50%{
+        transform: translateX(-$cardHight);
+
+    }
+
+    70%{
+        transform: translateY(-$cardHight);
+    }
+    100%{
+        transform: translateY(0);
+    }
+
+}
